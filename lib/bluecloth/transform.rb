@@ -105,7 +105,7 @@ module BlueCloth::Transform
 
 end
 
-require 'bluecloth/transform/blocks'
-require 'bluecloth/transform/inline'
-require 'bluecloth/transform/links'
-require 'bluecloth/transform/util'
+require 'lib/bluecloth/transform/blocks'
+require 'lib/bluecloth/transform/inline'
+require 'lib/bluecloth/transform/links'
+require 'lib/bluecloth/transform/util'

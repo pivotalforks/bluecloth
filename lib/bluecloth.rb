@@ -89,5 +89,5 @@ class BlueCloth
 
 end
 
-require 'bluecloth/transform'
+require 'lib/bluecloth/transform'
 BlueCloth.__send__ :include, BlueCloth::Transform

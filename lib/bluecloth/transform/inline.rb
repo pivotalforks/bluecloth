@@ -19,10 +19,10 @@ module BlueCloth::Transform
 	end
   
 	# Pattern to match strong emphasis in Markdown text
-	BoldRegexp = %r{ (\*\*|__) (\S|\S.+?\S) \1 }x
+	BoldRegexp = %r{ (\*\*|__) (\S|\S.*?\S) \1 }x
 
 	# Pattern to match normal emphasis in Markdown text
-	ItalicRegexp = %r{ (\*|_) (\S|\S.+?\S) \1 }x
+	ItalicRegexp = %r{ (\*|_) (\S|\S.*?\S) \1 }x
 
 	# Transform italic- and bold-encoded text in a copy of the specified +str+
 	# and return it.

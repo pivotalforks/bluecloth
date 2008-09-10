@@ -4,7 +4,7 @@ require 'spec'
 # gem 'mocha', '~> 0.5.6'
 # require 'mocha'
 
-require 'bluecloth'
+require 'lib/bluecloth'
 
 module BlueClothHelper
   protected

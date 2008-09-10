@@ -1,5 +1,5 @@
 # Unit test for bugs found in BlueCloth
-require 'spec_helper'
+require 'spec/spec_helper'
 
 describe BlueCloth, 'bugs' do
 
@@ -47,26 +47,12 @@ describe BlueCloth, 'bugs' do
 		assert_equal "<p><strong>aa</strong></p>", html
 	end
 	
-  it "2 character emphasis asterisks" do
-    pending
-		html = nil
-		str = BlueCloth::new( "*aa*" )
-		assert_nothing_raised do
-			html = str.to_html
-		end
-
-		assert_equal "<p><em>aa</em></p>", html
+  it "should correctly emphasize two character words with asterisks" do
+		BlueCloth::new("*aa*").to_html.should == "<p><em>aa</em></p>"
 	end
-
-  it "2 character emphasis underscores" do
-    pending
-		html = nil
-		str = BlueCloth::new( "_aa_" )
-		assert_nothing_raised do
-			html = str.to_html
-		end
-
-		assert_equal "<p><em>aa</em></p>", html
+	
+  it "should correctly emphasize two character words with underscores" do
+		BlueCloth::new("_aa_").to_html.should == "<p><em>aa</em></p>"
 	end
 
 	it "ruby with warnings enabled causes ArgumentError" do
